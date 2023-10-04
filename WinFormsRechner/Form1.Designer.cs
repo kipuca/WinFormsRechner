@@ -68,40 +68,52 @@
             // 
             // cboZahl1
             // 
+            cboZahl1.BackColor = SystemColors.ControlDarkDark;
+            cboZahl1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            cboZahl1.ForeColor = Color.Chartreuse;
             cboZahl1.FormattingEnabled = true;
             cboZahl1.Location = new Point(73, 113);
             cboZahl1.Name = "cboZahl1";
-            cboZahl1.Size = new Size(121, 23);
+            cboZahl1.Size = new Size(121, 28);
             cboZahl1.TabIndex = 2;
             cboZahl1.Text = "0";
             cboZahl1.SelectedIndexChanged += cboZahl1_SelectedIndexChanged;
             // 
             // cboRechenart
             // 
+            cboRechenart.BackColor = SystemColors.ControlDarkDark;
+            cboRechenart.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            cboRechenart.ForeColor = Color.IndianRed;
             cboRechenart.FormattingEnabled = true;
             cboRechenart.Items.AddRange(new object[] { "+", "-", "*", "/", "%" });
             cboRechenart.Location = new Point(73, 174);
             cboRechenart.Name = "cboRechenart";
-            cboRechenart.Size = new Size(121, 23);
+            cboRechenart.Size = new Size(121, 25);
             cboRechenart.TabIndex = 3;
             cboRechenart.Text = "+";
             cboRechenart.SelectedIndexChanged += cboRechenart_SelectedIndexChanged;
             // 
             // cboZahl2
             // 
+            cboZahl2.BackColor = SystemColors.ControlDarkDark;
+            cboZahl2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            cboZahl2.ForeColor = Color.DeepSkyBlue;
             cboZahl2.FormattingEnabled = true;
             cboZahl2.Location = new Point(73, 233);
             cboZahl2.Name = "cboZahl2";
-            cboZahl2.Size = new Size(121, 23);
+            cboZahl2.Size = new Size(121, 28);
             cboZahl2.TabIndex = 4;
             cboZahl2.Text = "0";
             cboZahl2.SelectedIndexChanged += cboZahl2_SelectedIndexChanged;
             // 
             // txtErgebnis
             // 
+            txtErgebnis.BackColor = SystemColors.ControlDarkDark;
+            txtErgebnis.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtErgebnis.ForeColor = Color.Violet;
             txtErgebnis.Location = new Point(73, 306);
             txtErgebnis.Name = "txtErgebnis";
-            txtErgebnis.Size = new Size(121, 23);
+            txtErgebnis.Size = new Size(121, 27);
             txtErgebnis.TabIndex = 5;
             txtErgebnis.Text = "0";
             txtErgebnis.TextChanged += textBox1_TextChanged_1;
