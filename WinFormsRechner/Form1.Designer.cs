@@ -42,22 +42,28 @@
             // 
             // btnBerechnen
             // 
+            btnBerechnen.BackColor = SystemColors.ControlDarkDark;
+            btnBerechnen.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBerechnen.ForeColor = Color.Cyan;
             btnBerechnen.Location = new Point(320, 247);
             btnBerechnen.Name = "btnBerechnen";
             btnBerechnen.Size = new Size(145, 30);
             btnBerechnen.TabIndex = 0;
             btnBerechnen.Text = "Berechnen";
-            btnBerechnen.UseVisualStyleBackColor = true;
+            btnBerechnen.UseVisualStyleBackColor = false;
             btnBerechnen.Click += btnBerechnen_Click;
             // 
             // btnBeenden
             // 
+            btnBeenden.BackColor = SystemColors.ControlDarkDark;
+            btnBeenden.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBeenden.ForeColor = Color.Cyan;
             btnBeenden.Location = new Point(320, 301);
             btnBeenden.Name = "btnBeenden";
             btnBeenden.Size = new Size(145, 31);
             btnBeenden.TabIndex = 1;
             btnBeenden.Text = "Beenden";
-            btnBeenden.UseVisualStyleBackColor = true;
+            btnBeenden.UseVisualStyleBackColor = false;
             btnBeenden.Click += btnBeenden_Click;
             // 
             // cboZahl1
