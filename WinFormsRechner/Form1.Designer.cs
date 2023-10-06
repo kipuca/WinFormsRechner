@@ -38,6 +38,7 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            lblError = new Label();
             SuspendLayout();
             // 
             // btnBerechnen
@@ -82,13 +83,13 @@
             // cboRechenart
             // 
             cboRechenart.BackColor = SystemColors.ControlDarkDark;
-            cboRechenart.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            cboRechenart.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             cboRechenart.ForeColor = Color.IndianRed;
             cboRechenart.FormattingEnabled = true;
             cboRechenart.Items.AddRange(new object[] { "+", "-", "*", "/", "%" });
             cboRechenart.Location = new Point(73, 174);
             cboRechenart.Name = "cboRechenart";
-            cboRechenart.Size = new Size(121, 25);
+            cboRechenart.Size = new Size(121, 33);
             cboRechenart.TabIndex = 3;
             cboRechenart.Text = "+";
             cboRechenart.SelectedIndexChanged += cboRechenart_SelectedIndexChanged;
@@ -155,11 +156,23 @@
             label4.TabIndex = 9;
             label4.Text = "Ergebnis";
             // 
+            // lblError
+            // 
+            lblError.Dock = DockStyle.Bottom;
+            lblError.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblError.Location = new Point(0, 406);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(800, 44);
+            lblError.TabIndex = 10;
+            lblError.TextAlign = ContentAlignment.MiddleCenter;
+            lblError.Click += lblError_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblError);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -190,5 +203,6 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Label lblError;
     }
 }

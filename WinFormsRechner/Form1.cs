@@ -54,33 +54,48 @@ namespace WinFormsRechner
 
         private void btnBerechnen_Click(object sender, EventArgs e)
         {
-            // Zahl1 lesen
-            string strZahl1 = cboZahl1.Text;
-            double dZahl1 = Convert.ToDouble(strZahl1);
-
-            string strRechenart = cboRechenart.Text;
-
-            // Zahl2 einlesen
-            string strZahl2 = cboZahl2.Text;
-            double dZahl2 = Convert.ToDouble(strZahl2);
-
-            double dErgebnis = 0;
-
-            switch (strRechenart)
+            try
             {
-                case "+": dErgebnis = dZahl1 + dZahl2; break;
-                case "-": dErgebnis = dZahl1 - dZahl2; break;
-                case "*": dErgebnis = dZahl1 * dZahl2; break;
-                case "/": dErgebnis = dZahl1 / dZahl2; break;
-                case "%": dErgebnis = dZahl1 % dZahl2; break;
+                // Fehlerausgabe zurücksetzen
+                lblError.Text = "";
+                lblError.BackColor = SystemColors.Control;
+
+                // Zahl1 lesen
+                string strZahl1 = cboZahl1.Text;
+                double dZahl1 = Convert.ToDouble(strZahl1);
+
+                string strRechenart = cboRechenart.Text;
+
+                // Zahl2 einlesen
+                string strZahl2 = cboZahl2.Text;
+                double dZahl2 = Convert.ToDouble(strZahl2);
+
+                double dErgebnis = 0;
+
+                switch (strRechenart)
+                {
+                    case "+": dErgebnis = dZahl1 + dZahl2; break;
+                    case "-": dErgebnis = dZahl1 - dZahl2; break;
+                    case "*": dErgebnis = dZahl1 * dZahl2; break;
+                    case "/": dErgebnis = dZahl1 / dZahl2; break;
+                    case "%": dErgebnis = dZahl1 % dZahl2; break;
+
+                }
+                txtErgebnis.Text = dErgebnis.ToString();
 
             }
-            txtErgebnis.Text = dErgebnis.ToString();
+            catch (Exception ex)
+            {
+                // Fehlerausgabe im Ausgabe Fenster
+                System.Diagnostics.Debug.WriteLine(ex);
 
+                //Fehlerausgabe in lblError
+                lblError.BackColor = Color.Red;
+                lblError.Text = "Bist du zu doof um Zahlen einzugeben???";
 
-
-
+            }
         }
+
 
         private void cboZahl2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -93,6 +108,11 @@ namespace WinFormsRechner
         }
 
         private void cboRechenart_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblError_Click(object sender, EventArgs e)
         {
 
         }
